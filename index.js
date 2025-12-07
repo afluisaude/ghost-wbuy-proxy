@@ -42,7 +42,7 @@ app.get('/api/latest-posts', async (req, res) => {
     }
     
     // 2. Se não estiver no cache, constrói a URL para o Ghost
-    const ghostUrl = `${GHOST_API_URL}/ghost/api/v4/content/posts/?key=${GHOST_CONTENT_KEY}&limit=4&fields=title,slug,feature_image,published_at,excerpt`;
+    const ghostUrl = `${GHOST_API_URL}/ghost/api/v4/content/posts/?key=${GHOST_CONTENT_KEY}&limit=3&fields=title,slug,feature_image,published_at,excerpt`;
 
     try {
         const response = await fetch(ghostUrl);
